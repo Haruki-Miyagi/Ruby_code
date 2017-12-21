@@ -67,12 +67,15 @@ puts "It worked!", "It worked!".inspect
  p :name  
  p "hello".reverse
  
+puts "=--------------"
 
-
-
-
-
-
+puts "HELLO".downcase
+y = "hello"
+puts y.upcase
+puts y
+puts y.upcase!
+puts y
+puts "HELLO".downcase!
 
 
 
