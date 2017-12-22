@@ -24,4 +24,5 @@ p0.swap(p1)
 p [ p0.x, p0.y ]         #=> [1.0, 2.0]
 p [ p1.x, p1.y ]         #=> [0.0, 0.0]
  
-p0.x = 10.0              #=> エラー（NoMethodError）
+
+p p0.x = 10.0              #=> エラー（NoMethodError）
