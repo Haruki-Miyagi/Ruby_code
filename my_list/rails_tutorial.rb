@@ -77,6 +77,22 @@ puts y.upcase!
 puts y
 puts "HELLO".downcase!
 
+puts "---------------"
+ x = "foo"
+ y = ""
+ puts "x is not empty" if !x.empty?
+ puts "Both strings are empty" if x.empty? && y.empty?
+ puts "One of the strings is empty" if x.empty? || y.empty?
+ p nil.to_s
+ p  nil.to_s.empty?
+
+ string = "foobar"
+ puts "The string '#{string}' is nonempty." unless string.empty?
+ puts "---------------"
+ 
+s = "racecar"
+puts "It's a palindrome!" if s == s.reverse
+
 
 
 
