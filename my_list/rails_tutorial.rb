@@ -45,7 +45,7 @@ p ('a'..'e').to_a
  
  puts "---------------"
  puts (1..5).each { |i| puts 2 * i }
-p (1..5).map { |i| i**2 }
+puts (1..5).map { |i| i**2 }
 p "name".split('')
 puts "------------"
 h1 = { :name => "Michael Hartl", :email => "michael@example.com" }
