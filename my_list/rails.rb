@@ -35,4 +35,33 @@ p s.class.superclass.superclass.superclass
 
 puts "--------------"
 p "      ".empty?
-p nil.blank
+#p nil.blank
+puts "---------------"
+
+puts "#{:success}"
+
+flash = { success: "It worked!", danger: "It failed." }
+p "#{flash[:success]}"
+puts "#{flash[:danger]}"
+
+puts "--------------"
+
+def alert_for(flash_type){
+    success: 'alert-success',
+    error: 'alert-danger',
+    alert: 'alert-warning',
+    notice: 'alert-info'
+    }[flash_type.to_sym] || flash_type.to_s
+end
+
+puts alert_for('alert-sssssssssssssss')
+puts alert_for(:error)
+puts alert_for(:alert)
+puts alert_for(:notice)
+
+puts alert_for('alert-success')
+puts alert_for(:success)
+
+
+
+
