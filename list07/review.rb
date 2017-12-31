@@ -38,7 +38,7 @@ def max (a,b)
 end
 p max(10,48)
 
-puts "loop メソッド"
+puts "loop メソッド(yield)"
 def myloop
   while true
     yield
