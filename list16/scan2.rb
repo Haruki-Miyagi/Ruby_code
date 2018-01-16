@@ -13,11 +13,11 @@ string = "Rubyの勉強, Railsの勉強, Railsの学習"
 md = string.match(/.*の勉強/)
 p md[0]
 
-puts "pre_match（マッチした部分の前を取り出す）"
+puts "=> pre_match（マッチした部分の前を取り出す）"
 reg = /の勉強/.match("Railsの勉強をしよう")
 p reg.pre_match
 
-puts "post_match（マッチした部分の後を取り出す）"
+puts "=> post_match（マッチした部分の後を取り出す）"
 reg = /の勉強/.match("Railsの勉強をしよう")
 p reg.post_match
 
@@ -27,4 +27,23 @@ p matched_string[0]
 p matched_string[1]
 p matched_string[2]
 
-puts "------------------"
+puts "=> slice, slice!（マッチした文字列を取り出す）"
+p "xxxabcxxxx".slice(/a../)
+p "xxxxxxx".slice(/a../) #nil
+a = "xxxxaaaxxx"
+a.slice!(/a../)
+p a
+
+puts "=> =~（マッチした部分のインデックスを返す）"
+p /aaa/ =~ "aaabbb"
+p /aaa/ =~ "rubyaaa"
+p /aaa/ =~ "ruby" #nil
+
+puts "!~ (マッチしなかったらtrueを返す)"
+p /aaa/ !~ "aaabbb"
+p /aaa/ !~ "rubyaaa"
+p /aaa/ !~ "ruby"
+
+puts "scan（マッチした部分をすべて配列で返す）"
+string = "of the ruby, by the ruby, for the ruby"
+p string.scan(/..by/)
