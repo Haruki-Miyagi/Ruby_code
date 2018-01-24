@@ -16,4 +16,29 @@ puts " => split, split!（マッチした部分を分割し配列で返す）"
 string = "Hello, Ruby, World"
 p string.split(/\s*,\s*/) # 「,」で分割
 
-puts "=> "
+puts "=> 繰り返しの表現"
+puts "=>0回以上の繰り返しでは*を使用します。"
+string = "bbb"
+p string.gsub(/a*b/, "morning ")
+
+string = "abbbabbaaaaab"
+p string.gsub(/a*b/, "morning ")
+
+puts "=> 1回以上の繰り返しでは"+"を使用します。"
+string = "bbb"
+p string.gsub(/a+b/, "morning ")
+
+string = "abbbabbaaaaa"
+p string.gsub(/a+b/, "morning ")
+
+puts "=> 繰り返し回数が0回か1回のときは?を使用します。"
+string = "bbb"
+p string.gsub(/a?b/, "morning ")
+string = "aab"
+p string.gsub(/a?b/, "morning ")
+
+puts "=> 繰り返し回数がちょうどn回のときは{n}を使用します。"
+string = "bbb"
+p string.gsub(/b{3}/, "morning ")
+string = "bb"
+p string.gsub(/b{3}/, "morning ")
