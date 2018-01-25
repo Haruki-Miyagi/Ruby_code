@@ -42,3 +42,21 @@ string = "bbb"
 p string.gsub(/b{3}/, "morning ")
 string = "bb"
 p string.gsub(/b{3}/, "morning ")
+
+puts "=> 繰り返し回数がn回以上のときは{n,}を使用します。"
+string = "bbb"
+p string.gsub(/b{2,}/, "morning ")
+string = "bb"
+p string.gsub(/b{2,}/, "morning ")
+
+puts "=>繰り返し回数がn回以下のときは{,n}を使用します。"
+string = "abbb"
+p string.gsub(/ab{,2}/, "morning ")
+string = "a"
+p string.gsub(/ab{,2}/, "morning ")
+
+puts "=> 繰り返し回数がn回以上、m回以下のときは{n,m}を使用します。"
+string = "xxxxabxxx"
+p string.gsub(/ab{1,2}/, "morning")
+string = "xxxxabbbxxxx"
+p string.gsub(/ab{1,2}/, "morning")
