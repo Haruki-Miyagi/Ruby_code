@@ -20,8 +20,14 @@ p string.gsub(/\Sa/, "morning")
 string = "0a"
 p string.gsub(/\Sa/, "morning")
 
-puts '10進数の数字に一致する場合は\dを使用します。'
+puts '10進数の数字に一致する場合は\Dを使用します。'
 string = "#a"
 p string.gsub(/\Da/, "morning")
 string = "9a"
 p string.gsub(/\Da/, "morning")
+
+puts '10進数の数字に一致する場合は\dを使用します'
+string = "Aa"
+p string.gsub(/\da/, "morning")
+string = "0323-3238-3232"
+p string.gsub(/\d{4}/, "morning")
