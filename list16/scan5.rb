@@ -20,3 +20,9 @@ string = "aaabbb\naaabbb"
 p string.gsub(/bbb\z/, "morning")
 string = "bbbbb\nbbbbb\nbbb"
 p string.gsub(/bbb\z/, "morning")
+
+puts "======================"
+object = "こんにちは　世界です。"
+jouken = "こんにちは"
+goku = "さようなら"
+p object.gsub(/#{jouken}/,goku)
