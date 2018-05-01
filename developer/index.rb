@@ -26,3 +26,10 @@ names = scores.each_with_object([]) do |(key, val), arr|
   arr << key if val >= 60
 end
 p names.sort
+# ==============================================
+puts "5/1"
+p [10.times.map {|i| 0 }]
+p [10.times.map {|i| 0 }].flatten
+p 10.times.map.with_index {|i, index| [i, index] }
+p [100, 200, 300].map.with_index {|i, index| [i,index]}
+p [*(10.times.map {|i| 0 })]
