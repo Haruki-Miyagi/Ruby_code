@@ -87,11 +87,27 @@ puts "key"
 hash.each_key do |key|
   p "#{key}"
 end
+puts "test ----------------------------"
+p hash.keys # [:Ruby, :Python, :Java]
+puts "test ----------------------------"
 
 puts "value"
 hash.each_value do |value|
   p "#{value}"
 end
+
+puts "test ----------------------------"
+p hash.values # [1, 2, 3]
+puts "test ----------------------------"
+
+puts "test ----------------------------"
+p hash.values_at(:Ruby, :Python) # [1, 2]
+puts "test ----------------------------"
+
+puts "to_a ----------------------------"
+p hash.to_a # [[:Ruby, 1], [:Python, 2], [:Java, 3]]
+puts "test ----------------------------"
+
 
 puts "invert"
 h = {Ruby: 1, Python: 2}.invert # {1=>:Ruby, 2=>:Python}
@@ -99,3 +115,8 @@ p h
 
 s = {Java: 3, Ruby: 3}.invert # {3=>:Ruby}
 p s
+
+
+puts "デフォルト-------------------------"
+has_default = Hash.new('We love Ruby!')
+p has_default[:test]
