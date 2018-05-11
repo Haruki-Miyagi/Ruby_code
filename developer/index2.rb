@@ -74,3 +74,28 @@ p 0.is_bool?     # => false
 p "".is_bool?    # => false
 p true.to_s.is_bool?  # => false
 p false.to_s.is_bool? # => false
+
+
+puts "5/11"
+
+hash = { Ruby: 1, Python: 2, Java: 3 }
+hash.each do |key, value|
+  p "#{key}: #{value}"
+end
+
+puts "key"
+hash.each_key do |key|
+  p "#{key}"
+end
+
+puts "value"
+hash.each_value do |value|
+  p "#{value}"
+end
+
+puts "invert"
+h = {Ruby: 1, Python: 2}.invert # {1=>:Ruby, 2=>:Python}
+p h
+
+s = {Java: 3, Ruby: 3}.invert # {3=>:Ruby}
+p s
