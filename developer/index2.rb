@@ -120,3 +120,11 @@ p s
 puts "デフォルト-------------------------"
 has_default = Hash.new('We love Ruby!')
 p has_default[:test]
+
+
+puts "5/14"
+if false
+msg = '無視される'
+  puts '無視される'
+  puts "表示されない"
+end
