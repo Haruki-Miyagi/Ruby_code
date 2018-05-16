@@ -84,3 +84,22 @@ p numbers.collect {|item| item.to_i(16) }
 numbers = [104, 101, 108, 108, 111]
 numbers.collect! {|item| item.to_s(16) }
 p numbers
+
+h = { "apple" => 100, "orange" => 200, "grape" => 300 }
+p h.map { |key, value| [key, value * 2] } # [["apple", 200], ["orange", 400], ["apple", 600]]
+
+
+h = { "apple" => 100, "orange" => 200, "grape" => 300 }
+p h.map { |key, value| [key, value * 2] }.to_h # {"apple"=>200, "orange"=>400, "grape"=>600}
+
+
+a = ["APPLE", "ORANGE", "GRAPE"]
+p a.map(&:downcase) # ["apple", "orange", "grape"]
+
+puts "--------sort_by-------"
+
+p ["foo", "bar", "Baz", "Qux"].sort_by { |v| v.downcase }
+# => ["bar", "Baz", "foo", "Qux"]
+
+p [1, 5, 7, 2, 4, 9].sort_by { |v| v * -1 }
+# => [9, 7, 5, 4, 2, 1]
