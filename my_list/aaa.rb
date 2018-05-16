@@ -68,3 +68,19 @@ p point1 # (3, 4)
 p point2 # (8, 9)
 p point1 + point2 #(11, 13)
 p point2 - point1 #(5, 5)
+
+puts "---map------------"
+numbers = ["68", "65", "6C", "6C", "6F"]
+p numbers.map {|item| item.to_i(16) }
+
+numbers = [104, 101, 108, 108, 111]
+numbers.map! {|item| item.to_s(16) }
+p numbers
+
+puts "---collect------------"
+numbers = ["68", "65", "6C", "6C", "6F"]
+p numbers.collect {|item| item.to_i(16) }
+
+numbers = [104, 101, 108, 108, 111]
+numbers.collect! {|item| item.to_s(16) }
+p numbers
