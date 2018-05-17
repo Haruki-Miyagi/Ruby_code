@@ -110,3 +110,11 @@ p h # {1=>:Ruby, 2=>:Python}
 
 s = {Java: 3, Ruby: 3}.invert 
 p s  # {3=>:Ruby}
+
+puts "-----upto, downto, step-----"
+puts 'upto'
+2.upto(10) {|i| p i }
+puts 'downto'
+10.downto(2) {|i| p i }
+puts 'step'
+2.step(10, 3) {|i| p i }
