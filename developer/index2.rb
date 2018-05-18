@@ -139,3 +139,30 @@ p test(aaa)
 
 bbb = true
 p test(bbb) # return false で指定しないとnilが渡される
+
+puts 'ヒアドキュメント'
+str = <<TEXT
+1行目
+2行目
+3行目
+TEXT
+
+p str
+
+"1行目\n2行目\n3行目\n".each_line { |line| p line }
+
+"1行目 2行目 3行目 ".each_line { |line| p line }
+
+"abcde".each_char { |ch| p ch }
+
+[1, 2, 3].each_with_index { |a, i| p "#{i}番目:#{a}" }
+
+[1, 2, 3].reverse_each { |a| p a }
+
+puts "sample"
+p [1, 2, 3, 4, 5].sample #
+p [1, 2, 3, 4, 5].sample #
+p '1つ---------'
+p [1, 2, 3, 4, 5, 6].find { |n| n % 3 == 0 }
+p '2つ---------'
+p [1, 2, 3, 3, 4, 5, 6].find { |n| n % 3 == 0 }
