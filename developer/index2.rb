@@ -128,3 +128,14 @@ msg = '無視される'
   puts '無視される'
   puts "表示されない"
 end
+
+puts "5/18"
+def test(test)
+  return false unless test
+  false
+end
+aaa = false
+p test(aaa)
+
+bbb = true
+p test(bbb) # return false で指定しないとnilが渡される

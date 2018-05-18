@@ -105,10 +105,10 @@ p [1, 5, 7, 2, 4, 9].sort_by { |v| v * -1 }
 # => [9, 7, 5, 4, 2, 1]
 
 puts "invert----"
-h = {Ruby: 1, Python: 2}.invert 
+h = {Ruby: 1, Python: 2}.invert
 p h # {1=>:Ruby, 2=>:Python}
 
-s = {Java: 3, Ruby: 3}.invert 
+s = {Java: 3, Ruby: 3}.invert
 p s  # {3=>:Ruby}
 
 puts "-----upto, downto, step-----"
