@@ -91,3 +91,18 @@ p b ||= 2  # b = b || 2
 
 c = 1
 p c ||= 4 # c = 1
+
+puts "メタプログラミング"
+# Cクラスを定義
+class C; end
+
+# class_evalメソッドで、Cクラスにmメソッドを定義
+C.class_eval %Q{
+  def m
+    puts "hello"
+  end
+}
+
+# mメソッドを実行
+C.new.m
+# => hello
