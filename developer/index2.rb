@@ -166,3 +166,20 @@ p '1つ---------'
 p [1, 2, 3, 4, 5, 6].find { |n| n % 3 == 0 }
 p '2つ---------'
 p [1, 2, 3, 3, 4, 5, 6].find { |n| n % 3 == 0 }
+
+
+puts "5/21"
+class Foo
+  def name=(name)
+    @name=name
+  end
+end
+
+foo = Foo.new       # => #<Foo:0x100de604 @name="">
+foo.name = 'foo'    # => "foo"
+p foo                 # => #<Foo:0x100de604 @name="foo">
+p @name               # nil
+
+
+t = %r{/home/user}
+p t
