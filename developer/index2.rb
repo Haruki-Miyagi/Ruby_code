@@ -183,3 +183,27 @@ p @name               # nil
 
 t = %r{/home/user}
 p t
+
+puts "5/22"
+puts "１->等しくない 2-> 等しい"
+puts "=="
+p 2 == 3
+p 2 == 2
+
+puts "前置の単項演算子!は、objが偽ならtrue、真ならfalseを返す"
+puts "!() を利用 (==)"
+p !(2 == 3)
+p !(2 == 2)
+
+puts "!="
+p 2 != 3
+p 2 != 2
+
+
+puts "inject test　のコード"
+numbers = [4, 3, 9, 8, 5, 6, 1, 7, 2]
+test = numbers.inject(['test']) {|a, num|
+  a << num
+}
+puts "--------------> inject 新しく作成した配列の前に追加される"
+p test
