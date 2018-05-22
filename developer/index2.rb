@@ -207,3 +207,23 @@ test = numbers.inject(['test']) {|a, num|
 }
 puts "--------------> inject 新しく作成した配列の前に追加される"
 p test
+
+
+p [*(10.times.map {|i| 0 })]
+p [(10.times.map {|i| 0 })]
+
+
+puts "メソッド"
+arr = [[:Ruby, 1], [:Python, 2]]
+p Hash[arr] #{:Ruby=>1, :Python=>2}
+p Hash[*arr] #{[:Ruby, 1]=>[:Python, 2]}
+
+p '文字列の重複'
+p t = 'Ruuuubbbbyyyyy'.squeeze('ub')
+p t
+
+puts "-------------> hash-key"
+hash = { Ruby: 1, Python: 2, Java: 3 }
+hash.each_key do |key|
+  p "#{key}"
+end
