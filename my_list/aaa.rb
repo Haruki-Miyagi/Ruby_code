@@ -118,3 +118,10 @@ puts 'downto'
 10.downto(2) {|i| p i }
 puts 'step'
 2.step(10, 3) {|i| p i }
+
+puts "test"
+s = "hello"
+s.each_char {|ch| print ch + "_" }
+puts ""
+
+'abcdefghijk'.each_char {|i| puts i }
