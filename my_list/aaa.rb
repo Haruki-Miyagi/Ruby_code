@@ -125,3 +125,8 @@ s.each_char {|ch| print ch + "_" }
 puts ""
 
 'abcdefghijk'.each_char {|i| puts i }
+
+
+
+p %Q('hekk\n.hello')
+%Q('hekk\n.hello').each_line {|i| puts i }
