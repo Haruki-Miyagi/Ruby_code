@@ -227,3 +227,63 @@ hash = { Ruby: 1, Python: 2, Java: 3 }
 hash.each_key do |key|
   p "#{key}"
 end
+
+puts "--------------"
+a, b, c = [1, 2]
+p a
+p b
+p c
+(a, b, c )= [1, 2]
+p "a->#{a}"
+p "b->#{b}"
+p "c->#{c}" #"c->"  ## nil
+puts "------------->test"
+a, b, c = [1, 2, 3]
+p "a->#{a}" #"a->1"
+p "b->#{b}"
+p "c->#{c}"
+
+puts "------------->test"
+a, b=[], c = [1, 2, 3]
+p "a->#{a}"  #"a->{}"
+p "b->#{b}"  #"b->[1, 2, 3]"
+p "c->#{c}"  #"c->[1, 2, 3]"
+
+puts "------------->test2"
+f={}, g = [1, 2, 3]
+# p "a->#{a}"  # "a->{}"
+p "f->#{f}"  #"f->[{}, [1, 2, 3]]"
+p "g->#{g}"  #"g->[1, 2, 3]"
+
+puts "------------->test3"
+c, d = [1, 2, 3]
+p "c->#{c}"
+p "d->#{d}"
+
+
+puts "------------->testxxx"
+a, b={}, c = [1, 2, 3],[1, 2, 3],[1, 2, 3]
+p "a->#{a}"
+p "b->#{b}"
+p "c->#{c}"
+puts b.class
+
+
+puts "------------->aaaatest"
+
+def aaaa(b={}, *c)
+  p b
+  puts b.class
+  p c
+end
+bbb = 'abc'
+aaaa([4,5,5],{hello: bbb, he: 'test'}, [4,5,5], {hello: bbb, he: 'test'})
+puts b.class
+
+
+
+puts "------------->testtest----"
+n, v={}, t = 2
+p "n->#{n}"
+p "v->#{v}"
+p "t->#{t}"
