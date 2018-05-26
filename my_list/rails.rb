@@ -106,3 +106,17 @@ C.class_eval %Q{
 # mメソッドを実行
 C.new.m
 # => hello
+
+puts "test"
+p s = [[1,2,3], [1,[1,2,3]],[1,[2,[5,6,7]]],2]
+
+p t = s.flatten
+
+#  [1,2,3].concat(2,3,4) error
+p [1,2,3].concat([2,3,4])
+p ["hd","fff"].join(',')
+p ["hd","fff"].join(',      ')
+
+p tt = Time.new
+# p tt.to_date ruby (NoMethodError)
+p tt.strftime"%Y/%m/%d"
