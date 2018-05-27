@@ -130,3 +130,33 @@ arr = [[:ruby, 1], [:python, 2], [:java, 3], [[abc: 4],[rails: 5]]]
 p arr.assoc(:rails)
 p arr.assoc(:abc)
 p arr.assoc(:python)
+
+puts "transpose"
+arr = [[1, 2, 3], ["Ruby", "Python", "Java"]]
+p arr.transpose # [[1, "Ruby"], [2, "Python"], [3, "Java"]]
+
+arr = [[1, 2, 3], ["Ruby", "Python", "Java"],["Ruby", "Python", "Java"]]
+p arr.transpose # [[1, "Ruby"], [2, "Python"], [3, "Java"]]
+
+puts "------> error check transpose" # -> errr element size differs (2 should be 3) (IndexError)
+# arr = [[1, 2, 3], ["Ruby", "Python"]]
+# p arr.transpose # [[1, "Ruby"], [2, "Python"], [3, "Java"]]
+
+
+p arr1 = [1, 2, 3]
+p arr2 = ["Ruby", "Python", "Java"]
+p arr3 = ["Ruby", "Python", "Java"]
+p arr1.zip(arr2,arr3,arr3)    # [[1, "Ruby"], [2, "Python"], [3, "Java”]]
+
+puts "------> error check zip -> nil"
+p arr1 = [1, 2, 3]
+p arr2 = ["Ruby", "Python"]
+p arr1.zip(arr2)# [[1, "Ruby"], [2, "Python"], [3, nil]]
+
+p arr1 = [1, 2]
+p arr2 = ["Ruby", "Python", "rails"]
+p arr1.zip(arr2)# [[1, "Ruby"], [2, "Python"]]
+
+p 'Ruuuubbbbyyyyy'.squeeze('ub')
+p 'Ruuuubbbbyyyyy'
+p 'Ruuuubbbbyyyyy'.squeeze('a')
