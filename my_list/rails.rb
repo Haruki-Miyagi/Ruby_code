@@ -120,3 +120,13 @@ p ["hd","fff"].join(',      ')
 p tt = Time.new
 # p tt.to_date ruby (NoMethodError)
 p tt.strftime"%Y/%m/%d"
+
+
+puts "code check"
+arr = [[:ruby, 1], [:python, 2], [:java, 3]]
+p arr.assoc(:ruby) # [:ruby, 1]
+
+arr = [[:ruby, 1], [:python, 2], [:java, 3], [[abc: 4],[rails: 5]]]
+p arr.assoc(:rails)
+p arr.assoc(:abc)
+p arr.assoc(:python)
