@@ -315,3 +315,22 @@ puts '---'
 _, a, b, * = 1, 2, 3, 4
 p a
 p b
+
+puts "5/28"
+class Hoge
+  def initialize(name="名無し")
+    @name = name
+  end
+
+  def self.cmethod
+    p self
+  end
+
+  def imethod
+    p self
+  end
+end
+
+hoge = Hoge.new("haruki")
+Hoge.cmethod # Hoge
+hoge.imethod # #<Hoge:0x007ff90216f988 @name="haruki">
