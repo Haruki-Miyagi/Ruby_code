@@ -334,3 +334,9 @@ end
 hoge = Hoge.new("haruki")
 Hoge.cmethod # Hoge
 hoge.imethod # #<Hoge:0x007ff90216f988 @name="haruki">
+
+puts "6/4"
+p [2, 3, 1, 10, 8].min  #=> 1
+p [2, 3, 1, 10, 8].max #=> 10
+
+p ['ruby', 'rails'].map { |str| str.capitalize } # => ["Ruby", "Rails"]
