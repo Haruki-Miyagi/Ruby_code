@@ -340,3 +340,23 @@ p [2, 3, 1, 10, 8].min  #=> 1
 p [2, 3, 1, 10, 8].max #=> 10
 
 p ['ruby', 'rails'].map { |str| str.capitalize } # => ["Ruby", "Rails"]
+
+puts "6/5"
+a = 1
+b = 2
+puts "--------------------"
+puts "a = b = 3"
+puts "--------------------"
+p a = b = 3
+puts "--------------------"
+puts "a"
+
+p a
+puts "--------------------"
+puts "b"
+
+p b
+puts "--------------------"
+
+p b = 3
+p b
