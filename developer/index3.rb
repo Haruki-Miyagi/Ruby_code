@@ -38,4 +38,12 @@ Hoge.send(method)
 method_list = [:hello, :goodbye, :current_time]
 Hoge.send(method_list.sample)
 
-puts "------"
+puts "-------------"
+
+p "abcdefg".slice(1, 3)
+p "abcdefg".slice(1..3)
+p "abcdefg".slice(/\w+/)
+
+p "abcde".delete("cd")
+p "abcde".delete("xy")
+" hi \t “.strip # => “hi”
