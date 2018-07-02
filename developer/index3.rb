@@ -46,4 +46,19 @@ p "abcdefg".slice(/\w+/)
 
 p "abcde".delete("cd")
 p "abcde".delete("xy")
-" hi \t “.strip # => “hi”
+" hi \t “.strip # => “hi”"
+
+puts "7/2"
+p "abcdefg".index("cd") # => 2
+p "abcdefg".index("zy") # => nil
+
+p "abcde".include?("bc") #=> true
+p "abcde".include?("zy") #=> false
+
+str = <<TEXT
+1行目
+2行目
+3行目
+TEXT
+
+p str #=> "1行目\n2行目\n3行目\n"
